@@ -43,9 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicParam.cs" />
+    <Compile Include="Connections\ConnectionBase.cs" />
     <Compile Include="Connections\IConnection.cs" />
+    <Compile Include="Connections\IConnectionFormula.cs" />
     <Compile Include="Connections\IJoint.cs" />
     <Compile Include="Fraction.cs" />
+    <Compile Include="ID.cs" />
+    <Compile Include="IDSystem.cs" />
+    <Compile Include="IDSystem.SID.cs" />
     <Compile Include="IParam.cs" />
     <Compile Include="IUpdate.cs" />
     <Compile Include="IVisibility.cs" />

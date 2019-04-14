@@ -3,7 +3,7 @@
     /// <summary>
     /// Представляет произвольный параметр.
     /// </summary>
-    public interface IParam
+    public interface IParam : IVisibility
     {
         /// <summary>
         /// Тип параметра.

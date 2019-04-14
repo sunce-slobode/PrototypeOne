@@ -10,7 +10,7 @@ namespace SunceSlobode.Prototype
         private double s_val;
         
 
-        public static explicit operator Fraction(double d) => new Fraction(d);
+        public static implicit operator Fraction(double d) => new Fraction(d);
         public static implicit operator double(Fraction f) => f.s_val;
         public static bool operator ==(Fraction f1, Fraction f2) => f1.s_val == f2.s_val;
         public static bool operator !=(Fraction f1, Fraction f2) => f1.s_val != f2.s_val;
@@ -27,12 +27,14 @@ namespace SunceSlobode.Prototype
             return false;
         }
 
+        //Auto generated
         public override bool Equals(object obj)
         {
             return obj is Fraction fraction &&
                    s_val == fraction.s_val;
         }
 
+        //Auto generated
         public override int GetHashCode()
         {
             return 1559236110 + s_val.GetHashCode();

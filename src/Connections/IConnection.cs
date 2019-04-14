@@ -13,7 +13,7 @@
         /// <summary>
         /// Параметр, показывающий, активна ли данная связь.
         /// </summary>
-        bool IsActive { get; }
+        bool IsActive { get; set; }
 
         /// <summary>
         /// Узел, в который входит данная связь.
