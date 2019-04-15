@@ -26,7 +26,7 @@ namespace SunceSlobode.Prototype
         /// <returns>Новый элемент нумерации.</returns>
         /// <!--я вообще хз как это описывать надо нормально-->
         /// <!--с классом ID тоже самое-->
-        public ID CreateID() => new SID(occupied.Max + 1, this, DeleteHandler);
+        public ID CreateID() => CreateID(occupied.Max + 1);
 
         /// <summary>
         /// Создает новый элемент нумерации данных с заданным значением.
@@ -38,6 +38,8 @@ namespace SunceSlobode.Prototype
         {
             if (occupied.Contains(value))
                 throw new InvalidOperationException("This value is occupied");
+
+            occupied.Add(value);
 
             return new SID(value, this, DeleteHandler);
         }

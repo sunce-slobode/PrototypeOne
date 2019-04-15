@@ -5,7 +5,7 @@
         public ParamType Type { get; }
         public virtual object Value { get; set; }
         public Fraction Inaccuracy { get; set; }
-        public int Visibility { get; set; }
+        public int Visibility { get; }
 
         public BasicParam(ParamType type, object value, int visibility = 0)
         {

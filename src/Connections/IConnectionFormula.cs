@@ -5,6 +5,6 @@
     /// </summary>
     public interface IConnectionFormula
     {
-        void Perform();
+        void Perform(); //Возможно здесь нужно object Perform()... но это еще обсуждается
     }
 }

@@ -5,6 +5,6 @@
     /// </summary>
     public interface IVisibility
     {
-        int Visibility { get; set; }
+        int Visibility { get; }
     }
 }

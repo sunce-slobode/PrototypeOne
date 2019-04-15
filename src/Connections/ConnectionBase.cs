@@ -9,7 +9,7 @@
 
         public IParam Target { get; }       
         public IJoint Terminator { get; }
-        public abstract int Visibility { get; set; }
+        public abstract int Visibility { get; }
         public abstract bool IsActive { get; set; }
         
         public virtual void Update()
