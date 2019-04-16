@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicParam.cs" />
+    <Compile Include="Connections\BasicJoint.cs" />
+    <Compile Include="Connections\Connection.cs" />
     <Compile Include="Connections\ConnectionBase.cs" />
     <Compile Include="Connections\IConnection.cs" />
     <Compile Include="Connections\IConnectionFormula.cs" />
@@ -52,6 +54,7 @@
     <Compile Include="ID.cs" />
     <Compile Include="IDSystem.cs" />
     <Compile Include="IDSystem.SID.cs" />
+    <Compile Include="ImmutableParam.cs" />
     <Compile Include="IParam.cs" />
     <Compile Include="IUpdate.cs" />
     <Compile Include="IVisibility.cs" />
@@ -61,6 +64,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="RulesetExample.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

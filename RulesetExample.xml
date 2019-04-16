@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Ruleset>
+  <Categories>
+    <Category name="economy">
+      <Param name="GDP" type="currency" inaccuracy="0">19.39e18 USD</Param>  
+      <!--Остальные параметры-->
+    </Category>
+    <!--Остальные категории-->
+  </Categories>
+
+  <ConnectionTree>
+    <Joint id ="1">
+      <Connection target="economy.GDP" active="false" terminator="3">economy.GDP + 1</Connection>
+      <!--active по умолчанию true, можно не писать-->
+      <!--в атрибуте terminator должен быть записан ID узла, в который входит связь-->
+      <!--содержимым является формула, в которой можно использовать любые параметры. Она будет с каждым тиком изменять target параметр-->
+      
+      <!--далее все исходящие из узла связи-->
+    </Joint>
+    <!--Остальные узлы-->
+  </ConnectionTree>
+
+  <!--При необходимости можно будет добавлять новые аттрибуты и элементы-->
+</Ruleset>
+
