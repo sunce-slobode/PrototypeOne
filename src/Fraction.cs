@@ -8,7 +8,6 @@ namespace SunceSlobode.Prototype
     public struct Fraction
     {
         private double s_val;
-        
 
         public static implicit operator Fraction(double d) => new Fraction(d);
         public static implicit operator double(Fraction f) => f.s_val;
@@ -18,7 +17,10 @@ namespace SunceSlobode.Prototype
         public static bool operator <(Fraction f1, Fraction f2) => f1.s_val < f2.s_val;
         public static bool operator >=(Fraction f1, Fraction f2) => f1.s_val >= f2.s_val;
         public static bool operator <=(Fraction f1, Fraction f2) => f1.s_val <= f2.s_val;
-        //TODO: доделать перегрузку всех операторов (нужно ли, правда?)
+				public static Fraction operator +(Fraction f1, Fraction f2) => Fraction(f1.s_val + f2.s_val < 1 ? f1.s_val + f2.s_val : 1);
+				public static Fraction operator -(Fraction f1, Fraction f2) => Fraction(f1.s_val - f2.s_val > 0 ? f1.s_val - f2.s_val : 0);
+				public static Fraction operator *(Fraction f1, Fraction f2) => Fraction(f1.s_val * f2.s_val);
+
         private static bool Validate(double d)
         {
             if ((d >= 0) & (d <= 1))
